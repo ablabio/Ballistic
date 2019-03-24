@@ -9,7 +9,7 @@ from datetime import datetime
 # read arguments.
 parser = argparse.ArgumentParser()
 parser.add_argument('--api_key', help='api key for accessing alpha vantage.')
-parser.add_argument('--symbol', help='path to file containing stock symbols to subscribe to.')
+parser.add_argument('--symbol', help='stock symbol to subscribe to.')
 args = parser.parse_args()
 api_key = args.api_key
 symbol = args.symbol
@@ -37,8 +37,5 @@ for ix in ts_ix:
 	v = str(ix_timestamp) + "_" + str(ts[ix])
 	ts_dict[v] = ix_timestamp
 r.zadd(ts_name, ts_dict)
-
-ts_sorted = r.zrange(ts_name, 0, -1, withscores = True)
-print(ts_sorted)
 
 # update mongodb every 2 hours
