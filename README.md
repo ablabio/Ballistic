@@ -5,4 +5,5 @@ Ballistic is a tool for maintaining a data service using Alpha Vantage for loadi
 ## Run Ballistic
 
 chmod +x fire.sh
+
 ./fire.sh
