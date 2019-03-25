@@ -26,7 +26,7 @@ r = redis.Redis( host=u'localhost', port=6379, db=1 )
 # load data inside redis.
 # save at the 20 & 50 second point in the minute (update new data points every 30 seconds).
 sec = datetime.now().second
-time.sleep( ( 60 - sec - 10 ) % 30 )
+time.sleep( ( 60 - sec ) % 60 )
 
 ts_name = "ts_" + symbol
 ts_ix = ts.index
