@@ -6,4 +6,4 @@ Ballistic is a tool for maintaining a data service using Yahoo Finance for loadi
 
 chmod +x fire.sh
 
-./fire.sh
+./fire.sh [symbols-path]
