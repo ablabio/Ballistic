@@ -11,7 +11,7 @@ args = parser.parse_args()
 symbol = args.symbol
 
 # get data from yahoo finance.
-data = yf(symbol, result_range='1d', interval='1m', dropna='True').result
+data = yf(symbol, result_range='5d', interval='1m', dropna='True').result
 ts = data.Close
 
 # reformat the data.
