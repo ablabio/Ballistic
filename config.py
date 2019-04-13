@@ -25,7 +25,7 @@ module.exports = {
     cmd: '"""+ cmd +
     """',
     watch: false,
-    max_memory_restart: '1G',
+    max_memory_restart: '100M',
     env: {
       NODE_ENV: 'development'
     },
